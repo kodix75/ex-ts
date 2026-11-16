@@ -54,6 +54,12 @@ export function countElementsInAnArrayOfUnknown(
  *
  * Complete the types and write the logic
  */
-export function arrayOfStringsToArrayOfStringLength(array: string[]) {
-  // Write your code here
+export function arrayOfStringsToArrayOfStringLength(
+  array: string[],
+ ) {
+    const elementLength: unknown[] = []
+  array.map(x => {
+    elementLength.push(x.length)
+  })
+  return elementLength;
 }
