@@ -7,21 +7,31 @@
  * improve the autocomplete experience in your editor.
  */
 
+
+
+
 export function removeNumbersBelowThreshold(
   array: number[],
   threshold: number,
 ): number[] | [] {
-  // Write your code here
-}
+  const new_array = array.filter((x) => {
+    return x >= threshold;
+});
+  return new_array;
+  }
+
 
 export function filterStringByLength(
   array: string[],
   minLength: number,
   maxLength: number,
 ): string[] | [] {
-  // Write your code here
-}
+  const new_array = array.filter((a) => a.length >= minLength && a.length <= maxLength)
+  return new_array;
+  }
+
 
 export function getOnlyTheLowercaseLettersOfTheString(string: string): string {
-  // Write your code here
+  const stringLow = String(string.match(/[a-z]/g) ?? null);
+  return stringLow.split(",").join("");
 }
